@@ -1,0 +1,49 @@
+{
+  "expo": {
+    "name": "vertec testapp",
+    "scheme": "vertectest",
+    "slug": "digital-damage-card",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.max321.digitaldamagecard"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "63e27954-bf62-4110-ba63-a345b759ef3c"
+      }
+    },
+    "owner": "max321",
+    "scheme": "myapp", // Replace with your custom scheme
+    "hooks": {
+      "postPublish": [
+        {
+          "file": "sentry-expo/upload-sourcemaps",
+          "config": {
+            "organization": "<YOUR_ORG_NAME>",
+            "project": "<YOUR_PROJECT_NAME>",
+            "authToken": "<YOUR_AUTH_TOKEN>"
+          }
+        }
+      ]
+    }
+  }
+}
